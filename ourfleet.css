@@ -33,3 +33,41 @@
     color: white;
     font-weight: bold;
   }
+
+/*-----All content buttons (Global Changes)-----*/
+.btn-primary {
+  background-color: #ff4d30;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color:black;
+}
+
+.btn-lg {
+  background-color: #ff4d30;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.btn-lg:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color:black;
+}
+
+.btn-secondary {
+  background-color: gray;
+  border-color: transparent;
+}
+
+.stretched-link {
+  color:black;
+}
+
+.stretched-link:hover {
+  color: #ff4d30;
+}
