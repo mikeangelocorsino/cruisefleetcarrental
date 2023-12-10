@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="terms.css">
+
+    <title>Cruise Fleet</title>
+    <link rel="icon" href="Image/Logo.png">
+    
+</head>
+<body>
+<!--NavBar-->
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="Index.html">
+      <img src="Image/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-top"/>
+      <span class="hidden">Cruise Fleet</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" id="navhome" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="ourfleet.html" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Our Fleet
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="ourfleet.html">Cars</a></li>
+            <li><a class="dropdown-item" href="ourfleet.html">SUV</a></li>
+            <li><a class="dropdown-item" href="ourfleet.html">Vans</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="ourservices.html" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Our Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="ourservices.html">With Driver</a></li>
+            <li><a class="dropdown-item" href="ourservices.html">Self Drive</a></li>
+            <li><a class="dropdown-item" href="ourservices.html">Long Term Car Rental</a></li>
+            <li><a class="dropdown-item" href="ourservices.html">Airport Transfer</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="blogs.html">Blogs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="bookacar.html">Book a Car</a>
+        </li>
+      </ul>
+
+        <form class="align-items-center" id="btn1">
+          <button class="btn btn2" type="button" data-bs-toggle="modal" data-bs-target="#Modal_SU">Sign Up</button>
+          <button class="btn btn3" type="button"data-bs-toggle="modal" data-bs-target="#Modal_LI">Log In</button>
+        </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<!--Sign UP-->
+<div class="modal fade" id="Modal_SU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form id="form" action="/">
+          <h1>Sign Up</h1>
+          <div class="input-control">
+              <label for="username">Username</label>
+              <input id="username" name="username" type="text">
+              <div class="error"></div>
+          </div>
+          <div class="input-control">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="text">
+              <div class="error"></div>
+          </div>
+          <div class="input-control">
+              <label for="password">Password</label>
+              <input id="password"name="password" type="password">
+              <div class="error"></div>
+          </div>
+          <div class="input-control">
+              <label for="password2">Confirm Password</label>
+              <input id="password2"name="password2" type="password">
+              <div class="error"></div>
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="register-link">
+            <p>By Signing in, you agree to the 
+              <b><a href="terms.html">Terms and Conditions</a></b>
+               and<b><a href="privacy.html"> Privacy Policy</a></b>
+               .
+              </p>
+            <p>Already have an account?<button type="button" class="btn btn_li" data-bs-toggle="modal" data-bs-target="#Modal_LI" style="color:white;">
+                Log In here!
+            </button></p>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+<!---Log In-->
+<div class="modal fade" id="Modal_LI" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <form id="form" action="/">
+          <h1>Log In</h1>
+          <div class="input-control">
+              <label for="username">Username/Email</label>
+              <input id="usernameLI" name="username" type="text">
+              <div class="error"></div>
+          </div>
+          <div class="input-control">
+              <label for="password">Password</label>
+              <input id="passwordLI"name="password" type="password">
+              <div class="error"></div>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+            <p>Forgot password?<a href="#"> Click here!</a></p>
+        </div>
+          <button type="submit">Log In</button>
+          <div class="register-link">
+            <p>By Logging in, you agree to the 
+              <b><a href="terms.html">Terms and Conditions</a></b>
+               and<b><a href="privacy.html"> Privacy Policy</a></b>
+               .
+              </p>
+            <p>Don't have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal_SU" style="color: white;">
+                Register here!
+            </button></p>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--Terms and Privacy-->
+<div class="container-sm">
+    <div class="termsHead">
+        <h1>Privacy Policy</h1>
+    </div>
+    <div class="terms">
+    <h6>This Privacy Policy describes how Cruise Fleet Car Rental collects, uses, and discloses your personal information when you use our services. By accessing or using Cruise Fleet services, you consent to the practices outlined in this policy.</h6>
+
+    <h4>Information Collected:</h4>
+     <p>We collect personal information provided by you during the reservation and rental process, including but not limited to your name, contact details, and payment information.</p>
+
+    <h4>Use of Information:</h4>
+     <p>We use the collected information to process reservations, provide rental services, and communicate with you regarding your rental.</p>
+
+    <h4>Security:</h4>
+     <p>Cruise Fleet employs industry-standard security measures to protect your personal information. However, no method of transmission over the internet or electronic storage is completely secure.</p>
+    
+    <h4>Third-Party Services:</h4>
+     <p>We may use third-party services to process payments, and such services have their own privacy policies. We encourage you to review the privacy policies of these third-party services.</p>
+
+     <h4>Data Retention:</h4>
+     <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law.</p>
+
+     <h4>Updates to Privacy Policy:</h4>
+     <p>Cruise Fleet reserves the right to update or modify this Privacy Policy at any time. We will notify you of any changes by posting the updated policy on our website.</p>
+
+     <h4>Use of Information:</h4>
+     <p>We use the collected information to process reservations, provide rental services, and communicate with you regarding your rental.</p>
+
+     <h4>Contact Information:</h4>
+     <p>For questions or concerns regarding this Privacy Policy, please contact us at contact@cruisefleetrentals.com.</p>
+
+     <p class="p-5">By using our services, you consent to the terms outlined in this Privacy Policy. It is your responsibility to review this policy periodically for updates.
+
+        Last Updated: December 1, 2023</p>
+    </div>
+</div>
+
+
+  <!--Footer-->
+  <footer class="bg-body-secondary text-center text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links a</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a class="text-dark text-decoration-none">Lorem ipsum dolor sit amet.</a>
+                    </li>
+                    <li>
+                        <a class="text-dark text-decoration-none">Lorem ipsum dolor sit amet.</a>
+                    </li>
+                    <li>
+                        <a class="text-dark text-decoration-none">Lorem ipsum dolor sit amet.</a>
+                    </li>
+                    <li>
+                        <a class="text-dark text-decoration-none">Lorem ipsum dolor sit amet.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Links b</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links c</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Links d</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!" class="text-dark">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 3</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-dark">Link 4</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center p-3 bg-secondary text-white">
+        © 2023 Copyright:
+        <a class="text-white" href="#">CruiseFleet.com</a>
+    </div>
+</footer>
+  
+
+
+
+
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
