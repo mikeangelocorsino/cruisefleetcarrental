@@ -1,73 +1,75 @@
 /*----------------Nav Bar---------------------------*/
 #navhome{
-    color:#ff4d30;
-  }
-  .hidden{
-    display: none;
-  }
-  .nav-link{
-    font-weight: bold;
-    font-size: large;
-    position: relative;
-  }
-  .nav-link:hover{
-    color: #ff4d30;
-    font-family:sans-serif;
-  }
-  .btn2{
-    font-size: large;
-    font-weight: bold;
-  }
-  .btn2:hover{
-    color: #ff4d30;
-    font-family: sans-serif;
-  }
-  .btn3{
-    background-color: #ff4d30;
-    border:none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-  }
-
-/*-----All content buttons (Global Changes)-----*/
-.btn-primary {
+  color:#ff4d30;
+}
+.hidden{
+  display: none;
+}
+.nav-link{
+  font-weight: bold;
+  font-size: large;
+  position: relative;
+}
+.nav-link:hover{
+  color: #ff4d30;
+  font-family:sans-serif;
+}
+.btn2{
+  font-size: large;
+  font-weight: bold;
+}
+.btn2:hover{
+  color: #ff4d30;
+  font-family: sans-serif;
+}
+.btn3{
   background-color: #ff4d30;
-  border-color: transparent;
+  border:none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 10px;
+  color: white;
+  font-weight: bold;
 }
 
-.btn-primary:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color:black;
+
+/*-----All content buttons (Global Changes)-----*/
+.btn-all {
+background-color: #ff4d30;
+border:none;
+color:white;
+border-radius: 10px;
+}
+
+.btn-all:hover {
+background-color: transparent;
+border-color: transparent;
+color:black;
 }
 
 .btn-lg {
-  background-color: #ff4d30;
-  border-color: transparent;
-  border-radius: 10px;
+background-color: #ff4d30;
+border-color: transparent;
+border-radius: 10px;
 }
 
 .btn-lg:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color:black;
+background-color: transparent;
+border-color: transparent;
+color:black;
 }
 
 .btn-secondary {
-  background-color: gray;
-  border-color: transparent;
+background-color: gray;
+border-color: transparent;
 }
 
 .stretched-link {
-  color:black;
+color:black;
 }
 
 .stretched-link:hover {
-  color: #ff4d30;
+color: #ff4d30;
 }
