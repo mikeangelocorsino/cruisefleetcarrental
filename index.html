@@ -1,744 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="style.css">
-
-<title>Cruise Fleet</title>
-    <link rel="icon" href="Image/Logo.png">
-    
-</head>
-<body>
-<!--NavBar-->
-<nav class="navbar navbar-expand-lg bg-body-secondary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="Index.html">
-      <img src="Image/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-top"/>
-      <span class="hidden">Cruise Fleet</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link active" id="navhome" aria-current="page" href="index.html">Home</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="ourfleet.html" id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Our Fleet
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="ourfleet.html">Cars</a></li>
-            <li><a class="dropdown-item" href="ourfleet.html">SUV</a></li>
-            <li><a class="dropdown-item" href="ourfleet.html">Vans</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="ourservices.html" id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Our Services
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="ourservices.html">With Driver</a></li>
-            <li><a class="dropdown-item" href="ourservices.html">Self Drive</a></li>
-            <li><a class="dropdown-item" href="ourservices.html">Long Term Car Rental</a></li>
-            <li><a class="dropdown-item" href="ourservices.html">Airport Transfer</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="blogs.html">Blogs</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="bookacar.html">Book a Car</a>
-        </li>
-      </ul>
-
-        <form class="align-items-center" id="btn1">
-          <button class="btn btn2" type="button" data-bs-toggle="modal" data-bs-target="#Modal_SU">Sign Up</button>
-          <button class="btn btn3" type="button"data-bs-toggle="modal" data-bs-target="#Modal_LI">Log In</button>
-        </form>
-    </div>
-  </div>
-</nav>
-
-<!-- Modal -->
-<!--Sign UP-->
-<div class="modal fade" id="Modal_SU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <form id="form" action="/">
-          <h1>Sign Up</h1>
-          <div class="input-control">
-              <label for="username">Username</label>
-              <input id="username" name="username" type="text">
-              <div class="error"></div>
-          </div>
-          <div class="input-control">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="text">
-              <div class="error"></div>
-          </div>
-          <div class="input-control">
-              <label for="password">Password</label>
-              <input id="password"name="password" type="password">
-              <div class="error"></div>
-          </div>
-          <div class="input-control">
-              <label for="password2">Confirm Password</label>
-              <input id="password2"name="password2" type="password">
-              <div class="error"></div>
-          </div>
-          <button type="submit">Sign Up</button>
-          <div class="register-link">
-            <p>By Signing in, you agree to the 
-              <b><a href="terms.html">Terms and Conditions</a></b>
-               and<b><a href="privacy.html"> Privacy Policy</a></b>
-               .
-              </p>
-            <p>Already have an account?<button type="button" class="btn btn_li" data-bs-toggle="modal" data-bs-target="#Modal_LI" style="color:white;">
-                Log In here!
-            </button></p>
-        </div>
-      </form>
-    </div>
-    </div>
-  </div>
-</div>
-<!---Log In-->
-<div class="modal fade" id="Modal_LI" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <form id="form" action="/">
-          <h1>Log In</h1>
-          <div class="input-control">
-              <label for="username">Username/Email</label>
-              <input id="usernameLI" name="username" type="text">
-              <div class="error"></div>
-          </div>
-          <div class="input-control">
-              <label for="password">Password</label>
-              <input id="passwordLI"name="password" type="password">
-              <div class="error"></div>
-          </div>
-          <div class="remember-forgot">
-            <label><input type="checkbox"> Remember me</label>
-            <p>Forgot password?<a href="#"> Click here!</a></p>
-        </div>
-          <button type="submit">Log In</button>
-          <div class="register-link">
-            <p>By Logging in, you agree to the 
-              <b><a href="terms.html">Terms and Conditions</a></b>
-               and<b><a href="privacy.html"> Privacy Policy</a></b>
-               .
-              </p>
-            <p>Don't have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal_SU" style="color: white;">
-                Register here!
-            </button></p>
-        </div>
-      </form>
-    </div>
-    </div>
-  </div>
-</div>
-
-  <!--Carousel-->
-  <div class="container-fluid">
-    <div id="carouselExampleCaptions" data-bs-ride="carousel" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-
-      <div class="container-fluid carousel-inner">
-        <div class="container">
-          <div class="carousel-item active">
-            <img src="Image/car4.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <h5 class="animated fadeInDown" style="animation-delay: 1s;">Drive into <span>Luxury</span></h5>
-              <p class="animated fadeInUp" style="animation-delay: 2s;">Rent with Confidence! Explore our Car Fleet Now
-                - Your Journey, Your Choice, Seamless and Smooth! 🚗 #DriveInStyle"</p>
-              <p class="animated fadeInUp" style="animation-delay: 3s;"><a href="#">Learn More</a></p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="Image/car5.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-              <h5 class="animated fadeInDown" style="animation-delay: 1s;">Save <span> Big </span> With our Car Rental
-              </h5>
-              <p class="animated fadeInUp" style="animation-delay: 2s;">Rent the car of your dreams. Unbeatable prices,
-                unlimited miles, flexible pick-up options and much more.</p>
-              <p class="animated fadeInUp" style="animation-delay: 3s;"><a href="#">Learn More</a></p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="Image/car6.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="animated fadeInDown" style="animation-delay: 1s;">Competitive <span>Prices</span></h5>
-              <p class="animated fadeInUp" style="animation-delay: 2s;">Our commitment to providing competitive prices
-                sets us apart in the industry. Whether you're seeking a weekend getaway, a business trip, or a long-term
-                rental, we ensure that our rates remain budget-friendly without compromising on the quality of our
-                vehicles.</p>
-              <p class="animated fadeInUp" style="animation-delay: 3s;"><a href="#">Learn More</a></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-
-    </div>
-  </div>
-
-  <!--form for Booking-->
-  <div class="container mb-5" id="CardBooking">
-    <div class="card p-4" id="CardForm">
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-          <label for="validationCustom04" class="form-label">Car Type</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Select your Car Type.</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select your Car Type.
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <label for="validationCustom04" class="form-label">Pick Up</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Select your Pick up Location.</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a Location.
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <label for="validationCustom04" class="form-label">Drop Off</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Select your Drop Off Location.</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a Location.
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <label for="validationCustom05" class="form-label">Pick Up Date</label>
-          <input type="date" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Please provide a Pick Up Date.
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <label for="validationCustom05" class="form-label">Drop Off Date</label>
-          <input type="date" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Please provide a Drop Off Date.
-          </div>
-        </div>
-
-        <div class="col-md-4" id="btnform">
-          <button class="btn" type="submit">Book Now</button>
-        </div>
-
-      </form>
-    </div>
-  </div>
-
-  <!--Plan-->
-  <div class="container" id="Plan_container">
-    <div class="plan-container">
-      <div class="plan-container_title">
-        <h3>Plan your trip now</h3>
-        <h2><b>Quick & easy car rental</b></h2>
-      </div>
-
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100" id="CardPlan">
-            <img src="Image/Plan1.png" class="card-img-top" alt="...">
-            <div class="card-bodyA">
-              <h5 class="card-title">Select Car</h5>
-              <p class="card-text">We offers a big range of vehicles for all your driving needs. We have the perfect car
-                to meet your needs.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100" id="CardPlan">
-            <img src="Image/Plan2.png" class="card-img-top" alt="...">
-            <div class="card-bodyA">
-              <h5 class="card-title">Contact Operator</h5>
-              <p class="card-text">Our knowledgeable and friendly operators are always ready to help with any questions
-                or concerns.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100" id="CardPlan">
-            <img src="Image/Plan3.png" class="card-img-top" alt="...">
-            <div class="card-bodyA">
-              <h5 class="card-title">Let's Drive</h5>
-              <p class="card-text">Whether you're hitting the open road, we've got you covered with our wide range of
-                cars.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!--Favorite-->
-  <section class=".pick-section">
-    <div class="container">
-      <div class="pick-container">
-        <div class="pick-container_title">
-          <h3>Vehicle Models</h3>
-          <h2>Our rental fleet</h2>
-          <p>
-            "Choose from a variety of our amazing vehicles to rent for your next trip."
-          </p>
-        </div>
-
-        <div class="pick-container_car-content">
-          <div class="pick-box">
-            <button onclick="changeContent(1)">Rolls Royce Phantom</button>
-            <button onclick="changeContent(2)">Mercedes S550</button>
-            <button onclick="changeContent(4)">Volvo XC90 B6</button>
-            <button onclick="changeContent(3)">Range Rover Evoque</button>
-            <button onclick="changeContent(6)">Lexus LM 300h</button>
-            <button onclick="changeContent(5)">Toyota Alphard</button>
-          </div>
-
-          <div class="box-cars">
-            <img id="mainImage" src="Image/p1.png" alt="car1">
-          </div>
-
-          <div class="pick-description">
-            <div class="pick-description__price">
-              <span id="rate">$ 300</span>
-              / per hour
-            </div>
-            <div class="pick-description__table">
-              <div class="pick-description__table__col"><span>Model</span><span id="model">Rolls Royce</span></div>
-              <div class="pick-description__table__col"><span>Mark</span><span id="mark">Phantom</span></div>
-              <div class="pick-description__table__col"><span>Year</span><span id="year">2022</span></div>
-              <div class="pick-description__table__col"><span>Doors</span><span id="doors">4</span></div>
-              <div class="pick-description__table__col"><span>AC</span><span id="ac">Yes</span></div>
-              <div class="pick-description__table__col"><span>Transmission</span><span id="transmission">8-Speed
-                  Automatic</span></div>
-              <div class="pick-description__table__col"><span>Fuel</span><span id="fuel">Premium Unleaded</span></div>
-            </div>
-            <a class="cta-btn" href="#booking-section">Reserve Now</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--about-->
-  <div class="container-fluid">
-    <div class="About_BG">
-      <h1>SAVE BIG WITH OUR LUXURIOUS CAR RENTAL!</h1>
-      <h3>Airport Transfer. Car Rental with Driver. Self Drive Services. Long Term Car Rental.</h3>
-    </div>
-  </div>
-  <img src="Image/About1.png" alt="Cars" class="About_image" />
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-5 me-5" style="max-width: 450px;">
-        <div class="card-header bg-transparent">
-          <h3>Why Choose Us</h3>
-        </div>
-        <br>
-        <div class="card-body">
-          <h1 class="card-title">Best valued deals you will ever find</h1>
-          <br>
-          <p class="card-text">Discover the best deals you'll ever find with our unbeatable offers. We're dedicated to
-            providing you with the best value for your money, so you can enjoy top-quality services and products without
-            breaking the bank. Our deals are designed to give you the ultimate renting experience, so don't miss out on
-            your chance to save big..</p>
-        </div>
-        <div class="card-footer bg-transparent">
-          <a class="AboutLink" href="#">Learn More</a>
-        </div>
-      </div>
-
-      <div class="col-sm-2 ps-5"></div>
-
-      <div class="col-sm-5 ps-5">
-        <div class="card mb-3" id="CardAbout" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-2">
-              <img src="Image/Plan1.png" width="100px" height="80px" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Cross Country Drive</h5>
-                <p class="card-text">Take your driving experience to the next level with our top-notch vehicles for your
-                  cross-country adventures.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-3" id="CardAbout" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-2">
-              <img src="Image/Plan2.png" width="100px" height="80px" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">All Inclusive Pricing</h5>
-                <p class="card-text">Get everything you need in one convenient, transparent price with our all-inclusive
-                  pricing policy.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-3" id="CardAbout" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-2">
-              <img src="Image/Plan3.png" width="100px" height="80px" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">No Hidden Charges</h5>
-                <p class="card-text">Enjoy peace of mind with our no hidden charges policy. We believe in transparent
-                  and honest pricing.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Testimonial-->
-  <div class="container" id="TestContainer">
-    <div class="testimonials-content">
-      <div class="testimonials-content_title">
-        <h4>Reviewed by People</h4>
-        <h2>Client's Testimonials</h2>
-        <p>Discover the positive impact we've made on the our clients by reading through their testimonials. Our clients
-          have experienced our service and results, and they're eager to share their positive experiences with you.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col">
-        <div class="container" id="Testimonial">
-          <div class="card" id="CardTest">
-            <div class="TestImgBox">
-              <img src="Image/man1.png" alt="Test Image" />
-            </div>
-            <div class="TestContent">
-              <h2>Dwayne Kayce</h2>
-              <p>
-                "We rented a car from this website and had an amazing experience! The booking was easy and the rental
-                rates were very affordable. "
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container" id="Testimonial">
-          <div class="card" id="CardTest">
-            <div class="TestImgBox">
-              <img src="Image/man2.png" alt="Test Image" />
-            </div>
-            <div class="TestContent">
-              <h2>Kent Daniel</h2>
-              <p>
-                "The car was in great condition and made our trip even better. Highly recommend for this car rental
-                website!"
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="container" id="Testimonial">
-          <div class="card" id="CardTest">
-            <div class="TestImgBox">
-              <img src="Image/man3.png" alt="Test Image" />
-            </div>
-            <div class="TestContent">
-              <h2>Jason Williams</h2>
-              <p>
-                "The car was in great condition and made our trip even better. Highly recommend for this car rental
-                website!"
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!--FAQ-->
-  <div class="container" id="FAQHeader">
-    <h1>Frequently Ask Questions</h1>
-    <p>Frequently Asked Questions About the Car Rental Booking Process on Our Website: Answers to Common Concerns and
-      Inquiries.</p>
-  </div>
-
-  <div class="container-md" id="FAQContent">
-    <div class="accordion" id="accordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne" id="button1" onclick="changeColor('button1')">
-            1. What is special about comparing rental car deals?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
-          <div class="accordion-body">
-            Comparing rental car deals is important as it helps find the best deal that fits your budget and
-            requirements, ensuring you get the most value for your money. By comparing various options, you can find
-            deals that offer lower prices, additional services, or better car models. You can find car rental deals by
-            researching online and comparing prices from different rental companies.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="button2"
-            onclick="changeColor('button2')">
-            2. How do I find the car rental deals?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
-          <div class="accordion-body">
-            You can find car rental deals by researching online and comparing prices from different rental companies.
-            Websites such as Expedia, Kayak, and Travelocity allow you to compare prices and view available rental
-            options. It is also recommended to sign up for email newsletters and follow rental car companies on social
-            media to be informed of any special deals or promotions.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="button3"
-            onclick="changeColor('button3')">
-            3. How do I find such low rental car prices?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
-          <div class="accordion-body">
-            Book in advance: Booking your rental car ahead of time can often result in lower prices. Compare prices from
-            multiple companies: Use websites like Kayak, Expedia, or Travelocity to compare prices from multiple rental
-            car companies. Look for discount codes and coupons: Search for discount codes and coupons that you can use
-            to lower the rental price. Renting from an off-airport location can sometimes result in lower prices.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!--Footer-->
-  <footer class="bg-secondary text-center text-lg-start text-white">
-    <div class="row p-4">
-      <div class="row my-4">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-
-          <div
-            class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
-            style="width: 150px; height: 150px;">
-            <img src="allpics/Logo2.png" height="70" alt="" loading="lazy" />
-          </div>
-
-          <p class="text-center">"Unleash opulence on the road. Elevate your journey with the epitome of luxury."</p>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">We offer!</h5>
-
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <a href="ourfleet.html" class="text-white">Our Fleet</a>
-            </li>
-            <li class="mb-2">
-              <a href="ourservices.html" class="text-white">Our Services</a>
-            </li>
-            <li class="mb-2">
-              <a href="aboutus.html" class="text-white">About Us</a>
-            </li>
-            <li class="mb-2">
-              <a href="blogs.html" class="text-white">Blogs</a>
-            </li>
-            <li class="mb-2">
-              <a href="contact.html" class="text-white">Contact Us</a>
-            </li>
-            <li class="mb-2">
-              <a href="bookacar.html" class="text-white">Book a Car</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Faq!</h5>
-
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <a href="index.html" class="text-white">Why rent to cruisefleet?</a>
-            </li>
-            <li class="mb-2">
-              <a href="ourservices.html" class="text-white">What services do we offer?</a>
-            </li>
-            <li class="mb-2">
-              <a href="ourfleet.html" class="text-white">How much it cost?</a>
-            </li>
-            <li class="mb-2">
-              <a href="blogs.html" class="text-white">Client feedback?</a>
-            </li>
-            <li class="mb-2">
-              <a href="contact.html" class="text-white">How to contact us?</a>
-            </li>
-            <li class="mb-2">
-              <a href="index.html" class="text-white">How to book a car?</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Contact</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <p><i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street, Poland</p>
-            </li>
-            <li>
-              <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
-            </li>
-            <li>
-              <p><i class="fas fa-envelope pe-2 mb-0"></i>luxuriouscars@cruisefleet.com</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <hr class="mb-4" />
-
-    <section class="">
-      <p class="d-flex justify-content-center align-items-center">
-        <span class="me-3">Register for free</span>
-        <button type="button" class="btn btn3 btn-rounded">
-          Sign up!
-        </button>
-      </p>
-    </section>
-
-    <hr class="mb-4" />
-
-    <div class="text-center p-3">
-      © 2023 Copyright:
-      <a class="text-white" href="https://mikeangelocorsino.github.io/cruisefleetcarrental/">CruiseFleet.com</a>
-    </div>
-  </footer>
-
-
-  <!-- Messenger Chat Plugin Code -->
-  <div id="fb-root"></div>
-
-  <!-- Your Chat Plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
-
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "197824680074538");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
-
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v18.0'
-      });
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-
-
-  <script src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+
+
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (validateInputs()) {
+        redirectToLoginForm();
+    }
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+};
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
+
+const isValidPassword = password => {
+    const pattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return pattern.test(String(password));
+};
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+
+    if (usernameValue === '') {
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
+    }
+
+    if (emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    if (passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8) {
+        setError(password, 'Password must be at least 8 characters.');
+    } else if (!isValidPassword(passwordValue)) {
+        setError(password, 'Password should contain at least one uppercase letter, one digit, and one special character.');
+    } else {
+        setSuccess(password);
+    }
+
+    if (password2Value === '') {
+        setError(password2, 'Please confirm your password');
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords don't match");
+    } else {
+        setSuccess(password2);
+    }
+
+    return document.querySelectorAll('.success').length === 4;
+
+};
+
+const redirectToLoginForm = () => {
+    const signUpModal = new bootstrap.Modal(document.getElementById('Modal_SU'));
+    signUpModal.hide();
+
+    const logInModal = new bootstrap.Modal(document.getElementById('Modal_LI'));
+    logInModal.show();
+};
+
+
+
+
+
+
+// --Log In--//
+
+
+
+
+
+//--Favorite--//
+function changeContent(buttonNumber) {
+    const mainImage = document.getElementById('mainImage');
+    const rate = document.getElementById('rate');
+    const model = document.getElementById('model');
+    const mark = document.getElementById('mark');
+    const year = document.getElementById('year');
+    const doors = document.getElementById('doors');
+    const ac = document.getElementById('ac');
+    const transmission = document.getElementById('transmission');
+    const fuel = document.getElementById('fuel');
+
+    switch (buttonNumber) {
+        case 1:
+            mainImage.src ="Image/p1.png";
+            rate.textContent = '$ 300';
+            model.textContent = 'Rolls Royce';
+            mark.textContent = 'Phantom';
+            year.textContent = '2022';
+            doors.textContent = '4';
+            ac.textContent = 'Yes';
+            transmission.textContent = '8-speed Automatic';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+        case 2:
+            mainImage.src ="Image/p2.png";
+            rate.textContent = '$ 200';
+            model.textContent = 'Mercedes S550';
+            mark.textContent = 'Mercedes';
+            year.textContent = '2021';
+            doors.textContent = '4';
+            ac.textContent = 'Yes';
+            transmission.textContent = '7-Speed Shifter';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+        case 3:
+            mainImage.src = "Image/p4.png";
+            rate.textContent = '$ 200';
+            model.textContent = 'Evoque';
+            mark.textContent = 'Range Rover';
+            year.textContent = '2023';
+            doors.textContent = '4';
+            ac.textContent = 'Yes';
+            transmission.textContent = '10-Speed Automatic';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+        case 4:
+            mainImage.src = "Image/p3.png";
+            rate.textContent = '$ 300';
+            model.textContent = 'XC90 B6 Core Sport';
+            mark.textContent = 'Volvo';
+            year.textContent = '2023';
+            doors.textContent = '4';
+            ac.textContent = 'Yes';
+            transmission.textContent = '8-Speed Shiftable';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+        case 5:
+            mainImage.src = "Image/p6.png";
+            rate.textContent = '$ 200';
+            model.textContent = 'Alphard 2.5 SC';
+            mark.textContent = 'Toyota';
+            year.textContent = '2023';
+            doors.textContent = '3';
+            ac.textContent = 'Yes';
+            transmission.textContent = '6-Speed Automatic';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+        case 6:
+            mainImage.src = "Image/p5.png";
+            rate.textContent = '$ 200';
+            model.textContent = 'LM 300H';
+            mark.textContent = 'Lexus';
+            year.textContent = '2023';
+            doors.textContent = '3';
+            ac.textContent = 'Yes';
+            transmission.textContent = '8-Speed Automatic';
+            fuel.textContent = 'Premium Unleaded';
+            break;
+            
+
+        default:
+            break;
+    }
+}
