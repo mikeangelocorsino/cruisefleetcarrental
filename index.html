@@ -76,96 +76,12 @@
         </ul>
 
         <form class="align-items-center" id="btn1">
-          <button class="btn btn2" type="button" data-bs-toggle="modal" data-bs-target="#Modal_SU">Sign Up</button>
-          <button class="btn btn3" type="button" data-bs-toggle="modal" data-bs-target="#Modal_LI">Log In</button>
+          <button class="btn btn2" type="button" onclick="signUp()" >Sign Up</button>
+          <button class="btn btn3" type="button" onclick="logIn()" >Log In</button>
         </form>
       </div>
     </div>
   </nav>
-
-  <!-- Modal -->
-  <!--Sign UP-->
-  <div class="modal fade" id="Modal_SU" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <form id="form" action="/">
-            <h1>Sign Up</h1>
-            <div class="input-control">
-              <label for="username">Username</label>
-              <input id="username" name="username" type="text">
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="text">
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="password">Password</label>
-              <input id="password" name="password" type="password">
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="password2">Confirm Password</label>
-              <input id="password2" name="password2" type="password">
-              <div class="error"></div>
-            </div>
-            <button type="submit">Sign Up</button>
-            <div class="register-link">
-              <p>By Signing in, you agree to the
-                <b><a href="terms.html">Terms and Conditions</a></b>
-                and<b><a href="privacy.html"> Privacy Policy</a></b>
-                .
-              </p>
-              <p>Already have an account?<button type="button" class="btn btn_li" data-bs-toggle="modal"
-                  data-bs-target="#Modal_LI" style="color:white;">
-                  Log In here!
-                </button></p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!---Log In-->
-  <div class="modal fade" id="Modal_LI" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <form id="form" action="/">
-            <h1>Log In</h1>
-            <div class="input-control">
-              <label for="username">Username/Email</label>
-              <input id="usernameLI" name="username" type="text">
-              <div class="error"></div>
-            </div>
-            <div class="input-control">
-              <label for="password">Password</label>
-              <input id="passwordLI" name="password" type="password">
-              <div class="error"></div>
-            </div>
-            <div class="remember-forgot">
-              <label><input type="checkbox"> Remember me</label>
-              <p>Forgot password?<a href="#"> Click here!</a></p>
-            </div>
-            <button type="submit">Log In</button>
-            <div class="register-link">
-              <p>By Logging in, you agree to the
-                <b><a href="terms.html">Terms and Conditions</a></b>
-                and<b><a href="privacy.html"> Privacy Policy</a></b>
-                .
-              </p>
-              <p>Don't have an account?<button type="button" class="btn" data-bs-toggle="modal"
-                  data-bs-target="#Modal_SU" style="color: white;">
-                  Register here!
-                </button></p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!--Carousel-->
   <div class="container-fluid">
