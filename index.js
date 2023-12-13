@@ -1,3 +1,8 @@
+//-- Log Out ---//
+function sarado() {
+    window.location.href = "login.html";
+}
+
 //--SignUp and LogIn --//
 function signUp() {
     window.location.href = "signup.html";
