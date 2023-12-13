@@ -9,10 +9,6 @@ function logIn() {
     window.location.href = "login.html";
 }
 
-function logOut() {
-    window.location.href = "login.html";
-}
-
 
 //--Favorite--//
 function changeContent(buttonNumber) {
