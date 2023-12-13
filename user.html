@@ -656,11 +656,9 @@
 
   <sript>
     function logOut() {
-    // Simulate clearing session data
     localStorage.removeItem('userToken'); 
     sessionStorage.clear();
 
-    // Redirect to the login page
     window.location.href = "login.html";
 }
 
