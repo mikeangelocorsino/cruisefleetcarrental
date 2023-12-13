@@ -1,7 +1,3 @@
-//-- Log Out ---//
-function sarado() {
-    window.location.href = "login.html";
-}
 
 //--SignUp and LogIn --//
 function signUp() {
@@ -14,6 +10,10 @@ function logIn() {
     window.location.href = "login.html";
 }
 
+document.getElementById('log_out').addEventListener('click', function () {
+
+    window.location.href = 'login.html';
+});
 
 //--Favorite--//
 function changeContent(buttonNumber) {
