@@ -44,9 +44,9 @@
 
 }
 
-.card{
+#card{
     border: none;
-    box-shadow: 2px 2px 2px 2px orangered;
+    box-shadow: 2px 2px 2px 2px #ff4d30;
 }
 .card-img {
     width: 100%;
@@ -58,7 +58,6 @@
     background-color: #ff4d30;
     color: white;
 }
-
 
 /*---Modal----*/
 
