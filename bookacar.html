@@ -12,6 +12,7 @@
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="ourfleet.css">
+  <link rel="stylesheet" href="signup.css">
 
   <title>Book a Car</title>
 
@@ -127,126 +128,43 @@
       </b></h3>
   </div>
 
-  <div class="container-lg bg-body-secondary rounded-4 p-5">
-    <form class="row g-3 needs-validation" novalidate>
-
-      <div class="col-md-8 position-relative">
-        <label for="eadd" class="form-label"><b>Email address</b></label>
-        <input type="email" class="form-control" id="eadd" placeholder="example@gmail.com" required>
-        <div id="enote" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <br>
-
-      <div class="col-md-4 position-relative">
-        <label for="cnum" class="form-label"><b>Contact No.</b></label>
-        <input type="tel" class="form-control" id="cnum" required>
-      </div>
-      <br>
-
-      <div class="col-md-6 position-relative">
-        <label for="fname" class="form-label"><b>First name</b></label>
-        <input type="text" class="form-control" id="fname" required>
-      </div>
-      <br>
-
-      <div class="col-md-6 position-relative">
-        <label for="lname" class="form-label"><b>Last name</b></label>
-        <input type="text" class="form-control" id="lname" required>
-      </div>
-      <br>
-
-      <div class="col-md-9 position-relative">
-        <label for="cadd" class="form-label"><b>Complete address</b></label>
-        <input type="text" class="form-control" id="cadd" required>
-        <div id="canote" class="form-text">House/Bldg No. Street Baranggay Purok City Province</div>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="zcode" class="form-label"><b>Zip code</b></label>
-        <input type="tel" class="form-control" id="zcode" required>
-      </div>
-      <br>
-
-      <hr>
-
-      <div class="col-md-5 position-relative">
-        <label for="ctype" class="form-label"><b>Reserve unit type</b></label>
-        <select class="form-select" id="ctype" required>
-          <option selected disabled value="">Choose...</option>
-          <option>Elite Car</option>
-          <option>Elegant SUV</option>
-          <option>Executive Van</option>
-
-        </select>
-      </div>
-      <br>
-
-      <div class="col-md-7 position-relative">
-        <label for="ctype" class="form-label"><b>Reserve unit model</b></label>
-        <select class="form-select" id="ctype" required>
-          <option selected disabled value="">Choose...</option>
-          <option>2022 Rolls Royce Phantom</option>
-          <option>2021 Mercedes S550</option>
-          <option>2022 BMW F80 M3</option>
-          <option>2020 Audi A6 TDI</option>
-          <option>2023 Bentley Continental GT W12</option>
-          <option>2023 Ford Mustang GT</option>
-          <option>2021 Cadillac Escalade Sport Platinum 6.2L V8</option>
-          <option>2023 Land Rover Range Rover Evoque</option>
-          <option>2020 Porsche Cayenne Turbo Sport Utility 4D</option>
-          <option>2021 Lincoln Nautilus</option>
-          <option>2022 Lexus RX350</option>
-          <option>2023 Volvo XC90 B6 Core Sport Utility</option>
-          <option>2021 Mercedes Benz Sprinter</option>
-          <option>2021 Hyundai H350 DLX Arstista Van</option>
-          <option>2020 Explorer GMC Savana</option>
-          <option>2020 Ford Transit</option>
-          <option>2023 Toyota Alphard 2.5 SC</option>
-          <option>2023 Lexus LM 300H</option>
-
-        </select>
-      </div>
-      <br>
-
-      <div class="col-md-6 position-relative">
-        <label for="ctype" class="form-label"><b>Type of service</b></label>
-        <select class="form-select" id="ctype" required>
-          <option selected disabled value="">Choose...</option>
-          <option>With Driver</option>
-          <option>Self Drive</option>
-          <option>Long Term Car Rental</option>
-          <option>Airport Transfer</option>
-
-        </select>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="cin" class="form-label"><b>Start Date</b></label>
-        <input type="date" class="form-control" id="cin" required>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="cout" class="form-label"><b>End Date</b></label>
-        <input type="date" class="form-control" id="cout" required>
-      </div>
-      <br>
-
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="cbox" required>
-        <label class="form-check-label" for="cbox">
-          I agree to the <a href="terms.html"><b>Terms & Conditions</b></a> and <a href="privacy.html"><b>Privacy Policy</b></a>.
-        </label>
-      </div>
-
-      <div class="col-12">
-        <button class="btn btn-all btn-lg" type="submit">Book Now</button>
-      </div>
-
+  <!---Sign Up-->
+  <div class="container">
+    <form id="signupForm">
+        <h1>Sign Up</h1>
+        <div class="input-control">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="password2">Confirm Password</label>
+            <input id="password2" name="password2" type="password">
+            <div class="error"></div>
+        </div>
+        <button type="submit" id="save_btn">Sign Up</button>
+        <div class="register-link">
+            <p>By Signing in, you agree to the
+                <b><a href="terms.html">Terms and Conditions</a></b>
+                and<b><a href="privacy.html"> Privacy Policy</a></b>
+                .
+            </p>
+            <p>Already have an account?<button type="button" id="login_btn" style="color:white;">
+                    Log In here!
+                </button></p>
+        </div>
     </form>
-  </div>
+</div>
   <br><br><br><br><br>
 
 
@@ -385,11 +303,14 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-<!--Js for validation-->
-<script src="bookACar.js"></script>
-
-<!--Js for Sign up & Login-->
+<!--Js for Sign up & Login Navbar-->
 <script src="index.js"></script>
+
+<!--Js for Sign up content-->
+<script src="signup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
 </body>
 
