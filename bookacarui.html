@@ -131,39 +131,47 @@
 
       <div class="col-md-8 position-relative">
         <label for="eadd" class="form-label"><b>Email address</b></label>
-        <input type="email" class="form-control" id="eadd" placeholder="example@gmail.com" required>
+        <input type="email" name="email" class="form-control" id="eadd" placeholder="example@gmail.com" required>
         <div id="enote" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="error"></div>
       </div>
       <br>
+
 
       <div class="col-md-4 position-relative">
         <label for="cnum" class="form-label"><b>Contact No.</b></label>
-        <input type="tel" class="form-control" id="cnum" required>
+        <input type="tel" name="tel" class="form-control" id="cnum" required>
+        <div class="error"></div>
       </div>
       <br>
 
+
       <div class="col-md-6 position-relative">
         <label for="fname" class="form-label"><b>First name</b></label>
-        <input type="text" class="form-control" id="fname" required>
+        <input type="text" name="fname" class="form-control" id="fname" required>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-6 position-relative">
         <label for="lname" class="form-label"><b>Last name</b></label>
-        <input type="text" class="form-control" id="lname" required>
+        <input type="text" name="lname" class="form-control" id="lname" required>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-9 position-relative">
         <label for="cadd" class="form-label"><b>Complete address</b></label>
-        <input type="text" class="form-control" id="cadd" required>
+        <input type="text" name="cadd" class="form-control" id="cadd" required>
         <div id="canote" class="form-text">House/Bldg No. Street Baranggay Purok City Province</div>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-3 position-relative">
         <label for="zcode" class="form-label"><b>Zip code</b></label>
-        <input type="tel" class="form-control" id="zcode" required>
+        <input type="tel" name="zcode" class="form-control" id="zcode" required>
+        <div class="error"></div>
       </div>
       <br>
 
@@ -171,19 +179,20 @@
 
       <div class="col-md-5 position-relative">
         <label for="ctype" class="form-label"><b>Reserve unit type</b></label>
-        <select class="form-select" id="ctype" required>
+        <select class="form-select" name="ctype" id="ctype" required>
           <option selected disabled value="">Choose...</option>
           <option>Elite Car</option>
           <option>Elegant SUV</option>
           <option>Executive Van</option>
 
         </select>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-7 position-relative">
-        <label for="ctype" class="form-label"><b>Reserve unit model</b></label>
-        <select class="form-select" id="ctype" required>
+        <label for="cmodel" class="form-label"><b>Reserve unit model</b></label>
+        <select class="form-select" name="cmodel" id="cmodel" required>
           <option selected disabled value="">Choose...</option>
           <option>2022 Rolls Royce Phantom</option>
           <option>2021 Mercedes S550</option>
@@ -205,12 +214,13 @@
           <option>2023 Lexus LM 300H</option>
 
         </select>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-6 position-relative">
-        <label for="ctype" class="form-label"><b>Type of service</b></label>
-        <select class="form-select" id="ctype" required>
+        <label for="cservice" class="form-label"><b>Type of service</b></label>
+        <select class="form-select" name="cservice" id="cservice" required>
           <option selected disabled value="">Choose...</option>
           <option>With Driver</option>
           <option>Self Drive</option>
@@ -218,35 +228,60 @@
           <option>Airport Transfer</option>
 
         </select>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="col-md-3 position-relative">
         <label for="cin" class="form-label"><b>Start Date</b></label>
-        <input type="date" class="form-control" id="cin" required>
+        <input type="date" name="cin" class="form-control" id="cin" required>
+        <div class="error"></div>
       </div>
+
       <br>
 
       <div class="col-md-3 position-relative">
         <label for="cout" class="form-label"><b>End Date</b></label>
-        <input type="date" class="form-control" id="cout" required>
+        <input type="date" name="cout" class="form-control" id="cout" required>
+        <div class="error"></div>
       </div>
       <br>
 
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="cbox" required>
+        <input class="form-check-input" type="checkbox" name="cbox" id="cbox" required>
         <label class="form-check-label" for="cbox">
           I agree to the <a href="terms.html"><b>Terms & Conditions</b></a> and <a href="privacy.html"><b>Privacy Policy</b></a>.
         </label>
+        <div class="error"></div>
       </div>
 
       <div class="col-12">
-        <button class="btn btn-all btn-lg" type="submit">Book Now</button>
+        <button class="btn btn-all btn-lg" type="submit" id="reservationForm" >Book Now</button>
       </div>
 
     </form>
   </div>
   <br><br><br><br><br>
+
+  <!--Booked car table---->
+
+  <div class="container">
+    <table class="table table-bordered  table-hover">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">#</th>
+          <th scope="col">CAR type</th>
+          <th scope="col">Car Model</th>
+          <th scope="col">Pick Up Date</th>
+          <th scope="col">Return Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <br><br><br>
+
 
 
 
