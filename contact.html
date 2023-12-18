@@ -13,7 +13,6 @@
 
   <link rel="stylesheet" href="ourfleet.css">
   <link rel="stylesheet" href="signup.css">
-  <link rel="stylesheet" href="contact.css">
 
   <title>Contact</title>
 
@@ -22,10 +21,10 @@
 <body>
 
 <!--NavBar-->
-<nav class="navbar navbar-expand-lg bg-body-secondary">
+<nav class="navbar navbar-expand-lg bg-body-secondary sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
-      <img src="allpics/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-top" />
+      <img src="allpics/Logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top" />
       <span class="hidden">Cruise Fleet</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -81,10 +80,10 @@
         </li>
       </ul>
 
-      <div class="align-items-center" id="btn1">
+      <form class="align-items-center" id="btn1">
         <button class="btn btn2" type="button" onclick="signUp()" >Sign Up</button>
         <button class="btn btn3" type="button" onclick="logIn()" >Log In</button>
-      </div>
+      </form>
     </div>
   </div>
 </nav>
@@ -122,87 +121,52 @@
 
     </div>
   </div>
-  <br><br><br><br><be>
-
-  <!---contact Form---->
-
-    <div class="container col-md-8 text-center text-black">
-        <h3><b>
-            <p>To contact us please fill up this form.</p>
-          </b></h3>
-      </div>
-    
-      <div class="container col-8 bg-body-secondary rounded-4 p-5">
-        <form class="row g-3 needs-validation" novalidate>
-    
-          <div class="col-md-8 position-relative">
-            <label for="eadd" class="form-label"><b>Email address</b></label>
-            <input type="email" class="form-control" id="eadd" placeholder="example@gmail.com" required>
-            <div id="enote" class="form-text">We'll never share your email with anyone else.</div>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="col-md-4 position-relative">
-            <label for="cnum" class="form-label"><b>Contact No.</b></label>
-            <input type="tel" class="form-control" id="cnum" required>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="col-md-6 position-relative">
-            <label for="fname" class="form-label"><b>First name</b></label>
-            <input type="text" class="form-control" id="fname" required>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="col-md-6 position-relative">
-            <label for="lname" class="form-label"><b>Last name</b></label>
-            <input type="text" class="form-control" id="lname" required>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="col-md-9 position-relative">
-            <label for="cadd" class="form-label"><b>Complete address</b></label>
-            <input type="text" class="form-control" id="cadd" required>
-            <div id="canote" class="form-text">House/Bldg No. Street Baranggay Purok City Province</div>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="col-md-3 position-relative">
-            <label for="zcode" class="form-label"><b>Zip code</b></label>
-            <input type="tel" class="form-control" id="zcode" required>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="mb-3">
-            <label for="csec" class="form-label"><b>Comments & suggestions</b></label>
-            <textarea class="form-control" id="csec" rows="5" required></textarea>
-            <div id="csnote" class="form-text">If not applicable (Put N/A) to proceed.</div>
-            <div class="error"></div>
-          </div>
-          <br>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cbox" required>
-            <label class="form-check-label" for="cbox">
-              I agree to receive a message via email.
-            </label>
-            <div class="error"></div>
-          </div>
-    
-          <div class="col-12">
-            <button class="btn btn-all btn-lg" type="submit" id="contactForm">Send</button>
-          </div>
-    
-        </form>
-    </div>
+  <br><br><br><br><br>
 
 
+  <div class="container col-md-8 text-center text-black">
+    <h3><b>
+        <p>To contact us please fill up this form.</p>
+      </b></h3>
+  </div>
+
+  <!---Sign Up-->
+  <div class="container">
+    <form id="signupForm">
+        <h1 class="text-center">Sign up / Login</h3><hr><br>
+        <div class="input-control">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="password2">Confirm Password</label>
+            <input id="password2" name="password2" type="password">
+            <div class="error"></div>
+        </div>
+        <button type="submit" id="save_btn">Sign Up</button>
+        <div class="register-link">
+            <p>By Signing in, you agree to the
+                <b><a href="terms.html">Terms and Conditions</a></b>
+                and<b><a href="privacy.html"> Privacy Policy</a></b>
+                .
+            </p>
+            <p>Already have an account?<button type="button" id="login_btn" style="color:white;">
+                    Log In here!
+                </button></p>
+        </div>
+    </form>
+</div>
   <br><br><br><br><br>
 
 
@@ -348,8 +312,6 @@
 
 <!--Js for Sign up content-->
 <script src="signup.js"></script>
-
-<script src="contact.js"></script> 
 
 </body>
 
