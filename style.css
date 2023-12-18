@@ -158,6 +158,29 @@ width: 100%;
     border-radius: 5px;
 }
 
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .carousel-caption {
+    bottom: 40%;
+    left: 5%;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    width: 100%;
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 250px;
+}
+}
+
 /*-------------------------Booking-------------------*/
 #CardBooking{
 padding-top: 100px;
@@ -362,6 +385,34 @@ box-shadow: 2px 2px 2px 2px gray;
     background-color: #ff4d30 !important;
     color: white;
   }
+
+  /* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .pick-container_title {
+      max-width: 100%;
+      padding: 0 20px;
+  }
+
+  .pick-container_car-content {
+      flex-direction: column;
+  }
+
+  .box-cars img {
+      width: 100%;
+  }
+}
+
+/* Media query for screens larger than 1200px */
+@media only screen and (min-width: 1200px) {
+  .pick-container_title {
+      max-width: 70rem;
+  }
+
+  .pick-container_car-content {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+}
   
 /*------------about------------------ */
 .About_BG{
