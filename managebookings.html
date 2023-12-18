@@ -110,89 +110,98 @@
 
   <div class="container col-md-8 text-center text-black">
     <h3><b>
-        <p>For reservations please fill up this form.</p>
+        <p>Admin Dashboard.</p>
       </b></h3>
   </div>
 
-  <div class="container-lg bg-body-secondary rounded-4 p-5">
-    <form class="row g-3 needs-validation" novalidate>
+ <!--button selection-->
+    <div class="container-md p-5">
+      <div class=".btnSelect text-center">
+      <button onclick="toggleTable('userTable')" id="btnOne">Manage User</button>
+      <button onclick="toggleTable('bookingTable')" id="btnTwo" >Manage Booking</button>
+      <button onclick="toggleTable('emailTable')" id="btnThree" >Manage Emails</button>
+    </div>
+    </div>
+    
 
-      <div class="col-md-8 position-relative">
-        <label for="eadd" class="form-label"><b>Email address</b></label>
-        <input type="email" class="form-control" id="eadd" placeholder="example@gmail.com" required>
-        <div id="enote" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <br>
 
-      <div class="col-md-4 position-relative">
-        <label for="cnum" class="form-label"><b>Contact No.</b></label>
-        <input type="tel" class="form-control" id="cnum" required>
-      </div>
-      <br>
 
-      <div class="col-md-6 position-relative">
-        <label for="fname" class="form-label"><b>First name</b></label>
-        <input type="text" class="form-control" id="fname" required>
-      </div>
-      <br>
 
-      <div class="col-md-6 position-relative">
-        <label for="lname" class="form-label"><b>Last name</b></label>
-        <input type="text" class="form-control" id="lname" required>
-      </div>
-      <br>
+<!-- User Table -->
+    <div class="container table-container" id="userTable">
+        <table class="table table-bordered  table-hover">
+          <thead>
+            <tr class="table-dark text-center">
+              <th scope="col">#</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Manage</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody">
+          </tbody>
+        </table>
+    </div>
 
-      <div class="col-md-9 position-relative">
-        <label for="cadd" class="form-label"><b>Complete address</b></label>
-        <input type="text" class="form-control" id="cadd" required>
-        <div id="canote" class="form-text">House/Bldg No. Street Baranggay Purok City Province</div>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="zcode" class="form-label"><b>Zip code</b></label>
-        <input type="tel" class="form-control" id="zcode" required>
-      </div>
-      <br>
-
-      <div class="col-md-6 position-relative">
-        <label for="ctype" class="form-label"><b>Reserve vehicle type</b></label>
-        <select class="form-select" id="ctype" required>
-          <option selected disabled value="">Choose...</option>
-          <option>Cars</option>
-          <option>SUV</option>
-          <option>Vans</option>
-
-        </select>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="cin" class="form-label"><b>Start Date</b></label>
-        <input type="date" class="form-control" id="cin" required>
-      </div>
-      <br>
-
-      <div class="col-md-3 position-relative">
-        <label for="cout" class="form-label"><b>End Date</b></label>
-        <input type="date" class="form-control" id="cout" required>
-      </div>
-      <br>
-
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="cbox" required>
-        <label class="form-check-label" for="cbox">
-          I agree to the <a href="terms.html"><b>Terms & Conditions</b></a> and <a href="privacy.html"><b>Privacy Policy</b></a>.
-        </label>
-      </div>
-
-      <div class="col-12">
-        <button class="btn btn-all btn-lg" type="submit">Book Now</button>
-      </div>
-
-    </form>
+    <!--Booking Table-->
+    <div class="container table-container hidden" id="bookingTable">
+      <table class="table table-bordered  table-hover">
+        <thead>
+          <tr class="table-dark text-center">
+            <th scope="col">#</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">CAR type</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">Pick Up Date</th>
+            <th scope="col">Return Date</th>
+            <th scope="col">Manage</th>
+          </tr>
+        </thead>
+        <tbody id="bookingTableBody">
+        </tbody>
+      </table>
   </div>
-  <br><br><br><br><br>
+
+    <!--Email Table-->
+    <div class="container table-container hidden" id="emailTable">
+      <table class="table table-bordered  table-hover">
+        <thead>
+          <tr class="table-dark text-center">
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Message</th>
+            <th scope="col">Manage</th>
+          </tr>
+        </thead>
+        <tbody id="emailTableBody">
+        </tbody>
+      </table>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="replyModalLabel">Reply to Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea id="replyTextArea" class="form-control" rows="5" placeholder="Write your reply..."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" onclick="sendReply()">Reply</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <br><br><br><br>
 
 
 
@@ -302,6 +311,8 @@
 
   <!--Js for Sign up & Login-->
 <script src="index.js"></script>
+
+  <script src="adminbooking.js"></script>
 
 </body>
 
