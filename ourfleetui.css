@@ -73,3 +73,45 @@
   .stretched-link:hover {
   color: #ff4d30;
   }
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control label {
+    font-size: 15px;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.error input {
+    border-color: #ff3860;
+}
+
+.error {
+    color: #ff3860;
+    font-size: 13px;
+    height: 13px;
+}
+
+#contactForm {
+    background-color: orangered;
+    color: white;
+}
