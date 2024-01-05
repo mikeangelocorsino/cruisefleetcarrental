@@ -10,11 +10,6 @@ function logIn() {
     window.location.href = "login.html";
 }
 
-document.getElementById('btn1').addEventListener('click', function () {
-
-    window.location.href = 'login.html';
-});
-
 //--Favorite--//
 function changeContent(buttonNumber) {
     const mainImage = document.getElementById('mainImage');
