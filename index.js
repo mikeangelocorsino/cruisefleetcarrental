@@ -10,7 +10,7 @@ function logIn() {
     window.location.href = "login.html";
 }
 
-document.getElementById('log_out').addEventListener('click', function () {
+document.getElementById('btn1').addEventListener('click', function () {
 
     window.location.href = 'login.html';
 });
