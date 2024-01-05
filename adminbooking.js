@@ -1,3 +1,11 @@
+document.getElementById('btn1').addEventListener('click', function () {
+
+    window.location.href = 'login.html';
+});
+
+
+
+
 function toggleTable(tableId) {
     // Hide all tables
     var allTables = document.querySelectorAll('.table-container');
